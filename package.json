@@ -1,0 +1,47 @@
+{
+  "name": "shopping-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
+    "build": "node build/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shayol/shopping-form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shayol/shopping-form/issues"
+  },
+  "homepage": "https://github.com/Shayol/shopping-form#readme",
+  "devDependencies": {
+    "chalk": "^2.3.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-webpack-plugin": "^3.1.0",
+    "node-sass": "^4.8.3",
+    "postcss": "^6.0.21",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.3",
+    "postcss-url": "^7.3.2",
+    "progress-bar-webpack-plugin": "^1.11.0",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.4.1",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  }
+}

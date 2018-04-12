@@ -1,0 +1,21 @@
+<% var data = {
+    title: "First | Page",
+    author: "Alex",
+    images : {
+    cart: require('./../../img/logo.png')
+    }
+}; %>
+
+<%= _.template(require('./../includes/head.html'))(data) %>
+
+<body>
+    <%= _.template(require('./../includes/header.html'))(data) %>
+
+    <main class="page-main">
+
+
+    </main>
+
+    <%= _.template(require('./../includes/footer.html'))(data) %>
+</body>
+</html>
