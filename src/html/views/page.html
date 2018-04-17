@@ -1,14 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
 <% var data = {
-title: "Second | Page",
-author: "Alex",
-images : {
-cart: require('./../../img/logo.png')
-}
-}; %>
+        title: "Second | Page",
+        author: "Alex",
+        images : {
+            cart: require('./../../img/logo.png')
+        }
+       };
+%>
 
 <%= _.template(require('./../includes/head.html'))(data) %>
 
 <body>
+
 <%= _.template(require('./../includes/header.html'))(data) %>
 
 <main class="page-main">
@@ -17,5 +23,7 @@ cart: require('./../../img/logo.png')
 </main>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>
+
 </body>
+
 </html>

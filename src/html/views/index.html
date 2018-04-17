@@ -1,10 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <% var data = {
-    title: "First | Page",
-    author: "Alex",
-    images : {
-    cart: require('./../../img/logo.png')
-    }
-}; %>
+        title: "First | Page",
+        author: "Alex",
+        images : {
+            cart: require('./../../img/logo.png')
+        }
+       };
+%>
 
 <%= _.template(require('./../includes/head.html'))(data) %>
 
