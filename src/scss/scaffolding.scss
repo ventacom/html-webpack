@@ -1,0 +1,36 @@
+@font-face {
+  font-weight: normal;
+  font-family: "Univers Lt";
+  font-style: normal;
+  src: url(../fonts/univers_lt.woff2) format("woff2"),
+  url(../fonts/univers_lt.woff) format("woff");
+}
+@font-face {
+  font-weight: bold;
+  font-family: "Univers Lt";
+  font-style: normal;
+  src: url(../fonts/univers_lt_bold.woff2) format("woff2"),
+  url(../fonts/univers_lt_bold.woff) format("woff");
+}
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 22px;
+  font-family: "Univers Lt", "Arial", sans-serif;
+  color: #404040;
+  font-style: normal;
+
+  background-color: #ffffff;
+}
+img {
+  width: 100%;
+  height: auto;
+}
