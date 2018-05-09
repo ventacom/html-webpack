@@ -24,7 +24,21 @@ module.exports = merge(baseConf, {
         port: port
     },
     module: {
-        rules: utils.styleLoaders({sourceMap: true})
+        rules:
+            utils.styleLoaders({sourceMap: true}).concat([
+                {
+                    test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                    loader: "file-loader",
+                    options: {
+                        limit: 10000,
+                        name: '[name].[ext]',
+                        outputPath: 'img/'
+                        // publicPath: '../img/'
+                        // useRelativePath: process.env.NODE_ENV === "production"
+                    }
+                }
+            ]
+        )
     },
     plugins: [
         new ExtractTextPlugin({

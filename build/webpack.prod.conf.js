@@ -13,10 +13,42 @@ const env = config.prod.env
 module.exports = merge(baseConf, {
     mode: 'production',
     module: {
-        rules: utils.styleLoaders({
-            sourceMap: true,
-            extract: true
-        })
+        rules:
+            utils.styleLoaders({
+                sourceMap: true,
+                extract: true
+            }).concat([
+            {
+                test: /\.(png|jpe?g|gif)(\?.*)?$/,
+                loader: "url-loader",
+                options: {
+                    limit: 10 * 1024,
+                    name: '[name].[ext]',
+                    outputPath: 'img/'
+                    // publicPath: '../img/'
+                    // useRelativePath: process.env.NODE_ENV === "production"
+                }
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-url-loader',
+                options: {
+                    // Images larger than 10 KB won’t be inlined
+                    limit: 10 * 1024,
+                    // Remove quotes around the encoded URL –
+                    // they’re rarely useful
+                    noquotes: true,
+                }
+            },
+            {
+                test: /\.(jpg|png|gif|svg)$/,
+                loader: 'image-webpack-loader',
+                // Specify enforce: 'pre' to apply the loader
+                // before url-loader/svg-url-loader
+                // and not duplicate it in rules with them
+                enforce: 'pre'
+            }
+        ])
     },
     devtool: config.prod.productionSourceMap ? '#source-map' : false,
     plugins: [
